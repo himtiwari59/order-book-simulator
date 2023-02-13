@@ -142,55 +142,6 @@ public final class OrderBook implements Displayable {
     }
 
     public void display(){
-
-        int count = bidOrders.size()>=
-                askOrders.size() ?
-                bidOrders.size() :
-                askOrders.size();
-
-        List<Order> bidList = new ArrayList<Order>(
-                bidOrders.values());
-        List<Order> askList = new ArrayList<Order>(
-                askOrders.values());
-        System.out.println("Bid Price : Qty || Ask Price : Qty");
-
-        for(int i =0;i<count;i++){
-
-            display(bidList,
-                    askList,
-                    count,
-                    i
-            );
-
-            display(askList,
-                    bidList,
-                    count,
-                    i
-            );
-        }
-    }
-
-    private void display(final List<Order> list1,final List<Order> list2, int totalCount, int counter){
-        String price1="NA";String qty1="NA";String price2 =""; String qty2="";
-        if(list1.size() < totalCount){
-
-            if(counter< list1.size()){
-                price1 = ""+list1
-                        .get(counter)
-                        .getPrice();
-                qty1 = ""+list1
-                        .get(counter)
-                        .getQuantity();
-            }
-
-            price2 = ""+list2
-                    .get(counter)
-                    .getPrice();
-            qty2 = ""+list2
-                    .get(counter)
-                    .getQuantity();
-
-            System.out.println(price1+" : "+qty1+" || "+price2+" : "+qty2);
-        }
+        //ytd
     }
 }
