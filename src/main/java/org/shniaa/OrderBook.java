@@ -30,12 +30,8 @@ public final class OrderBook implements Displayable {
             int timeDelta = o1.getTime().
                     compareTo(o2.getTime());
 
-            int qtyDelta = o1.getQuantity() -
-                    o2.getQuantity();
 
-            return priceDelta == 0 ?
-                    (timeDelta ==0 ?
-                            qtyDelta : timeDelta)
+            return priceDelta == 0 ? timeDelta
                     : priceDelta;
 
         };
@@ -50,12 +46,7 @@ public final class OrderBook implements Displayable {
             int timeDelta = o1.getTime().
                     compareTo(o2.getTime());
 
-            int qtyDelta = o1.getQuantity() -
-                    o2.getQuantity();
-
-            return priceDelta == 0 ?
-                    (timeDelta ==0 ?
-                            qtyDelta : timeDelta)
+            return priceDelta == 0 ? timeDelta
                     : priceDelta;
 
         };
